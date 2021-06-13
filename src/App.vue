@@ -1,13 +1,19 @@
 <template>
-  <m-header />
+  <div>
+    <m-header />
+    <tab />
+    <router-view />
+  </div>
 </template>
 
 <script>
 import Header from '@/components/header/header'
+import Tab from '@/components/tab/tab'
 
 export default {
   components: {
-    MHeader: Header
+    MHeader: Header,
+    Tab
   }
 }
 </script>
