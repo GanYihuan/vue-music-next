@@ -1,4 +1,6 @@
-﻿module.exports = {
+﻿const registerRouter = require('./backend/router')
+
+module.exports = {
   css: {
     loaderOptions: {
       sass: {
@@ -7,6 +9,11 @@
           @import "@/assets/scss/mixin.scss";
         `
       }
+    }
+  },
+  devServer: {
+    before(app) {
+      registerRouter(app)
     }
   }
 }
